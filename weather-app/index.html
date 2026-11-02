@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-card">
+            <h1 class="title">Weather</h1>
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Enter city name..." autocomplete="off">
+                <button id="search-btn" aria-label="Search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </div>
+            
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+            </div>
+
+            <div id="error-message" class="hidden">
+                City not found. Please try again.
+            </div>
+
+            <div id="weather-info" class="weather-info hidden">
+                <h2 id="city-name">--</h2>
+                <div class="temp">
+                    <span id="temperature">--</span>°C
+                </div>
+                <div class="description" id="weather-description">--</div>
+                
+                <div class="details">
+                    <div class="detail-box">
+                        <span class="detail-label">Wind</span>
+                        <span class="detail-value" id="wind-speed">-- km/h</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
